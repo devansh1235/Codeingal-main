@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p> Local variable: variable declared inside a function, this can be accessee inside the fuction only </p>
+    <p id="demo"> </p>
+    <p id="demo1"> </p>
+    <p id="demo2"> </p>
+    <button onclick="myFunction()">
+        click here
+    </button>
+    <script>
+        var a = 9;
+        function myFunction() {
+            var b = 4; /*local variable*/
+            document.getElementById("demo").innerHTML = a * b;
+        }
+        document.getElementById("demo1").innerHTML = a;
+        document.getElementById("demo2").innerHTML = b;
+    </script>
+</body>
+
+</html>
