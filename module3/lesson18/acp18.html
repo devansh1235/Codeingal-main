@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #111;
+            padding: 12px 14px;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        a.active {
+            background: #fff;
+            color: #111;
+        }
+
+        #scrollRow {
+            position: absolute;
+            top: 48px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+        }
+
+        #section1,
+        #section2,
+        #section3 {
+            display: inline-block;
+            vertical-align: top;
+            width: 100vw;
+            height: calc(100vh - 48px);
+            box-sizing: border-box;
+            padding: 28px 34px;
+            scroll-snap-align: start;
+        }
+
+        #section1 {
+            background: #ffb347;
+            color: #111;
+        }
+
+        #section2 {
+            background: #ffffff;
+            color: #0a6b2b;
+        }
+
+        #section3 {
+            background: #b7e4c7;
+            color: #0b2b1e;
+        }
+
+        h1 {
+            margin: 0 0 8px 0;
+            font-size: 34px;
+        }
+
+        h3 {
+            margin: 0 0 12px 0;
+            font-size: 22px;
+        }
+
+        h5 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+
+        p {
+            margin-top: 16px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#section1" id="link1" >About Me</a></li>
+            <li><a href="#section2" id="link2">Karate Achievements</a></li>
+            <li><a href="#section3" id="link3">Literary Achievements</a></li>
+        </ul>
+    </nav>
+
+    <div id="scrollRow">
+
+        <div id="section1">
+            <h1>About Me</h1>
+            <h3>Devansh Bose</h3>
+            <h5>
+                I am Devansh Bose, Class 9, Section I. I am a karate black belt. I have won various medals in karate.
+                Karate helps me stay disciplined, focused, and confident. I train regularly and try to improve every
+                day.
+            </h5>
+            <p>Scroll sideways to go to the next section.</p>
+        </div>
+
+        <div id="section2">
+            <h1>Karate Achievements</h1>
+            <h3>Medals</h3>
+            <h5>
+                • Commonwealth Championship: Bronze<br>
+                • Malaysia Open: Two Bronze medals<br>
+                • India Challengers Cup: 6 medals<br>
+                • Interschool: 2 medals<br>
+                • CISCE State Level: Silver
+            </h5>
+            
+        </div>
+
+        <div id="section3">
+            <h1>Literary Achievements</h1>
+            <h3>Writing</h3>
+            <h5>
+                • Kaavi Salman<br>
+                • Own book: Aetherium Academy<br>
+                • Published poems in 4 anthologies<br>
+                • Commonwealth Essay: Silver and Bronze
+            </h5>
+            <p>Use the top menu to jump to any section.</p>
+        </div>
+
+    </div>
+
+    <script>
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            height: 100vh;
+
+            overflow: hidden;
+
+        }
+
+        /* NAV */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            background: #111;
+
+            padding: 12px 14px;
+
+            box-sizing: border-box;
+
+            z-index: 10;
+
+        }
+
+        ul {
+
+            list-style: none;
+
+            margin: 0;
+
+            padding: 0;
+
+            white-space: nowrap;
+
+        }
+
+        li {
+
+            display: inline-block;
+
+            margin-right: 10px;
+
+        }
+
+        a {
+
+            color: #fff;
+
+            text-decoration: none;
+
+            padding: 6px 10px;
+
+            border-radius: 6px;
+
+            font-size: 16px;
+
+            display: inline-block;
+
+            outline: none;
+
+        }
+
+        /* ACTIVE STATE */
+
+        a:focus,a:focus-visible {
+
+background: #fff;
+
+color: #ffcc00; /* yellow text */
+
+}
+
+/* CONTENT */
+
+#scrollRow {
+
+position: absolute;
+
+top: 48px;
+
+left: 0;
+
+right: 0;
+
+bottom: 0;
+
+overflow-x: auto;
+
+overflow-y: hidden;
+
+white-space: nowrap;
+
+scroll-snap-type: x mandatory;
+
+}
+
+.section {
+
+display: inline-block;
+
+width: 100vw;
+
+height: calc(100vh - 48px);
+
+padding: 28px 34px;
+
+box-sizing: border-box;
+
+scroll-snap-align: start;
+
+}
+
+#section1 { background: #ffb347; }
+
+#section2 { background: #ffffff; }
+
+#section3 { background: #b7e4c7; }
+
+h1 { margin: 0 0 8px; font-size: 34px; }
+
+h3 { margin: 0 0 12px; font-size: 22px; }
+
+h5 { margin: 0; font-size: 18px; line-height: 1.5; }
+
+</style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#section1" tabindex="0">About Me</a></li>
+
+            <li><a href="#section2" tabindex="0">Karate Achievements</a></li>
+
+            <li><a href="#section3" tabindex="0">Literary Achievements</a></li>
+
+        </ul>
+
+    </nav>
+
+    <div id="scrollRow">
+
+        <div id="section1" class="section">
+
+            <h1>About Me</h1>
+
+            <h3>Devansh Bose</h3>
+
+            <h5>I am a karate black belt and medal winner.</h5>
+
+        </div>
+
+        <div id="section2" class="section">
+
+            <h1>Karate Achievements</h1>
+
+            <h5>Commonwealth, Malaysia Open, CISCE medals</h5>
+
+        </div>
+
+        <div id="section3" class="section">
+
+            <h1>Literary Achievements</h1>
+
+            <h5>Poems, books, essay awards</h5>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

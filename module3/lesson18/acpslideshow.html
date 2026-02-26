@@ -1,0 +1,238 @@
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 100vh;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #111;
+            color: white;
+            padding: 12px 16px;
+            z-index: 9999;
+            box-sizing: border-box;
+            white-space: nowrap;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 18px;
+            font-size: 16px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: #333;
+        }
+
+        .navbar a.active {
+            background-color: white;
+            color: #111;
+        }
+
+        .scroll-row {
+            display: flex;
+            flex-direction: row;
+            width: 300vw;
+            height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        #section1,
+        #section2,
+        #section3 {
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            padding-top: 80px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        #section1 {
+            background-color: #ffb347;
+            color: #1b1b1b;
+        }
+
+        #section2 {
+            background-color: #ffffff;
+            color: #124;
+        }
+
+        #section3 {
+            background-color: #b7e4c7;
+            color: #0b2b1e;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 38px;
+        }
+
+        h3 {
+            margin-top: 10px;
+            font-size: 22px;
+        }
+
+        h5 {
+            margin-top: 14px;
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 18px;
+            opacity: 0.9;
+        }
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.55);
+            padding: 18px;
+            border-radius: 12px;
+            max-width: 780px;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <div class="navbar">
+        <a href="#section1" id="link1">About Me</a>
+        <a href="#section2" id="link2">Karate Achievements</a>
+        <a href="#section3" id="link3">Literary Achievements</a>
+    </div>
+
+    <div class="scroll-row" id="scrollRow">
+
+        <div id="section1" class="container-fluid">
+            <h1>About Me</h1>
+            <h3>Devansh Bose</h3>
+
+            <div class="box">
+                <h5>
+                    I am Devansh Bose, a student of Class 9, Section I. I am a Karate Black Belt and I have won various
+                    medals in
+                    karate. Karate has taught me discipline, focus, and how to stay calm under pressure. I enjoy
+                    training regularly
+                    and working hard to improve my technique and fitness.
+                </h5>
+                <p>Scroll sideways to read the next sections.</p>
+            </div>
+        </div>
+
+        <div id="section2" class="container-fluid">
+            <h1>Karate Achievements</h1>
+            <h3>Medals and Titles</h3>
+
+            <div class="box">
+                <h5>
+                    My key karate achievements include:
+                    <br><br>
+                    • Commonwealth Championship: Bronze medal
+                    <br>
+                    • Malaysia Open: Two Bronze medals
+                    <br>
+                    • India Challengers Cup: 6 medals
+                    <br>
+                    • Interschool: 2 medals
+                    <br>
+                    • CISCE State Level: Silver medal
+                    <br><br>
+                    These achievements motivate me to train harder and aim for bigger goals in the future.
+                </h5>
+                <p>Keep scrolling sideways for the literary section.</p>
+            </div>
+        </div>
+
+        <div id="section3" class="container-fluid">
+            <h1>Literary Achievements</h1>
+            <h3>Writing and Publications</h3>
+
+            <div class="box">
+                <h5>
+                    Along with sports, I also enjoy literature and writing.
+                    <br><br>
+                    • Kaavi Salman
+                    <br>
+                    • Own book: Aetherium Academy
+                    <br>
+                    • Published poems in 4 anthologies
+                    <br>
+                    • Queen’s Commonwealth Essay: Silver and Bronze awards
+                    <br><br>
+                    Writing helps me express my thoughts clearly and build confidence in communication.
+                </h5>
+                <p>Use the menu to jump back to any section.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        (function () {
+            var row = document.getElementById("scrollRow");
+            var l1 = document.getElementById("link1");
+            var l2 = document.getElementById("link2");
+            var l3 = document.getElementById("link3");
+
+            function setActive(index) {
+                l1.className = "";
+                l2.className = "";
+                l3.className = "";
+                if (index === 1) l1.className = "active";
+                if (index === 2) l2.className = "active";
+                if (index === 3) l3.className = "active";
+            }
+
+            setActive(1);
+
+            row.addEventListener("scroll", function () {
+                var w = window.innerWidth;
+                var x = row.scrollLeft;
+
+                if (x < w * 0.5) setActive(1);
+                else if (x >= w * 0.5 && x < w * 1.5) setActive(2);
+                else setActive(3);
+            });
+
+            l1.onclick = function (e) {
+                e.preventDefault();
+                row.scrollLeft = 0;
+            };
+            l2.onclick = function (e) {
+                e.preventDefault();
+                row.scrollLeft = window.innerWidth;
+            };
+            l3.onclick = function (e) {
+                e.preventDefault();
+                row.scrollLeft = window.innerWidth * 2;
+            };
+        })();
+    </script>
+
+</body>
+
+</html>
+```

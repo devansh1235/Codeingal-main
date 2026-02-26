@@ -1,0 +1,17 @@
+body { font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background-color: "#0D1117";color: black;}
+h1{ color: darkblue}
+a{ color: aqua;}
+a:hover{ color: red;}
+ul > li { font-weight: bold;}
+h1+p{ background-color: rgb(2, 2, 72); padding: 10px;}
+ul li:nth-child(3){background-color: rgb(255, 220, 177);}
+ul li::before {
+content: "🚀 ";
+}
+a::after {
+    content: " 🛰️";
+}
+p::first-letter {
+    font-size: 200%;
+    color: #FF7B72;
+}
