@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Methods and Loops Project</title>
+</head>
+
+<body>
+
+    <h1>Methods and Loops Project</h1>
+
+    <p id="demo"></p>
+
+    <script>
+
+        /* Day using switch */
+
+        var d = new Date();
+        var day;
+
+        switch (d.getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+
+            case 1:
+                day = "Monday";
+                break;
+
+            case 2:
+                day = "Tuesday";
+                break;
+
+            case 3:
+                day = "Wednesday";
+                break;
+
+            case 4:
+                day = "Thursday";
+                break;
+
+            case 5:
+                day = "Friday";
+                break;
+
+            case 6:
+                day = "Saturday";
+        }
+
+        document.getElementById("demo").innerHTML = "Today is " + day;
+
+        document.write("<br>");
+
+        /* Random numbers using for loop */
+
+        for (i = 0; i < 5; i++) {
+            var num = Math.random() * 100;
+            document.write(Math.floor(num) + "<br>");
+        }
+
+        document.write("<br>");
+
+        /* One random rounded number */
+
+        var r = Math.random() * 50;
+        document.write("Random Number: " + Math.floor(r) + "<br>");
+
+        document.write("<br>");
+
+        /* Date */
+
+        document.write("Date: " + d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear() + "<br>");
+
+        /* Time */
+
+        document.write("Time: " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());
+
+    </script>
+
+</body>
+
+</html>
