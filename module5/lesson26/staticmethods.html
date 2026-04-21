@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Static methods
+    </title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        class student {
+            constructor(name) {
+                this.name = name
+            }
+            static hello() { //static method 
+                return "hello"
+            }
+            goodevening() {
+                return "goodevening" + this.name
+
+            }
+
+        }
+        Myname= new student("Devansh Bose")
+        document.getElementById("demo").innerHTML= student.hello();
+        document.getElementById("demo2").innerHTML = Myname.goodevening();
+    </script>
+</body>
+
+</html>

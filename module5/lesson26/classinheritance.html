@@ -1,0 +1,42 @@
+<!-- Class Inheritance.
+Outline:
+In this activity, learn about class inheritance. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Class Inheritance</title>
+
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        class car { //parent class
+            constructor(brand) {
+                this.brand = brand;
+            }
+            display() {
+
+                return 'i have '+ this.brand+" "
+
+            }
+        }
+       
+        class model extends car {   //child class
+            constructor(brand, model) {
+                super(brand)
+                this.model = model
+
+            }
+            show() {
+               return this.display() + 'its a ' + this.model
+            }
+        }
+        let mycar = new model("ford", "mustang")
+        document.getElementById("demo").innerHTML = mycar.show()
+
+    </script>
+</body>
+
+</html>

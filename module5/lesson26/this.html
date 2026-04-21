@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head> Java script this keyword</head>
+   
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+var person={firstname:"Devansh",lastname:"Bose",id:3, 
+    fullname: function(){
+        return this.firstname+this.lastname
+
+    }
+
+
+}
+ 
+function myfunction(){
+    return this;
+}
+document.getElementById("demo").innerHTML= person.fullname()
+document.getElementById("demo2").innerHTML= myfunction()
+</script>
+</body>
+
+
+</html>
